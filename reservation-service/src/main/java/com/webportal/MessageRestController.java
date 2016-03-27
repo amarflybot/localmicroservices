@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by kumarao on 02-03-2016.
+ * Created by amarendra on 27/03/16.
  */
 @RefreshScope
 @RestController
-public class MessageRestController {
+class MessageRestController {
 
-    @Value("${message}")
-    private String message;
+	@Value("${message}")
+	private String message;
 
-    @RequestMapping("/message")
-    public String message(){
-        return this.message;
-    }
+	@RequestMapping("/message")
+	String message() {
+		return this.message;
+	}
 }

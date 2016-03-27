@@ -5,45 +5,38 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Created by kumarao on 02-03-2016.
+ * Created by amarendra on 27/03/16.
  */
 @Entity
-public class Reservation {
+class Reservation {  // RESERVATIONS
 
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String reservationName;
+	@Id // unique key index
+	@GeneratedValue // auto incrementing
+	private Long id; // ID
 
-    public Reservation() {
-        // For JPA
-    }
+	private String reservationName; // RESERVATION_NAME
 
-    public Reservation(String reservationName) {
-        this.reservationName = reservationName;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    @Override
-    public String toString() {
-        return "Reservation{" +
-                "id=" + id +
-                ", reservationName='" + reservationName + '\'' +
-                '}';
-    }
+	public String getReservationName() {
+		return reservationName;
+	}
 
-    public Long getId() {
-        return id;
-    }
+	@Override
+	public String toString() {
+		return "Reservation{" +
+				"id=" + id +
+				", reservationName='" + reservationName + '\'' +
+				'}';
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	Reservation() {// pourquoi JPA pourquoi???
+	}
 
-    public String getReservationName() {
-        return reservationName;
-    }
+	public Reservation(String reservationName) {
 
-    public void setReservationName(String reservationName) {
-        this.reservationName = reservationName;
-    }
+		this.reservationName = reservationName;
+	}
 }

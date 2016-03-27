@@ -8,11 +8,12 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.Collection;
 
 /**
- * Created by kumarao on 02-03-2016.
+ * Created by amarendra on 27/03/16.
  */
 @RepositoryRestResource
 interface ReservationRepository extends JpaRepository<Reservation, Long> {
 
-    @RestResource(path = "by-name")
-    Collection<Reservation> findByReservationName(@Param("name") String name);
+	// select * from reservations where reservation_name = :rn
+	@RestResource(path = "by-name")
+	Collection<Reservation> findByReservationName(@Param("rn") String rn);
 }
