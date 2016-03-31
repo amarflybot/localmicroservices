@@ -12,7 +12,8 @@
 		<module>config-service</module>
 		<module>eureka-service</module>
 		<module>hystrix-dashboard</module>
-		<module>reservation-service</module>
-		<module>reservation-client</module>
+		<module>person-service</module>
+		<module>person-client</module>
+		<module>auth-service</module>
 	</modules>
 </project>
