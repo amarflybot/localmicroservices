@@ -13,13 +13,13 @@ public class Computer {
     @Id
     private Long id;
     private String name;
-    private Number ipaddress;
+    private Integer ipaddress;
     private String brand;
 
     public Computer() {
     }
 
-    public Computer(Long id, String name, Number ipaddress, String brand) {
+    public Computer(Long id, String name, Integer ipaddress, String brand) {
         this.id = id;
         this.name = name;
         this.ipaddress = ipaddress;
@@ -46,7 +46,7 @@ public class Computer {
         return ipaddress;
     }
 
-    public void setIpaddress(Number ipaddress) {
+    public void setIpaddress(Integer ipaddress) {
         this.ipaddress = ipaddress;
     }
 
