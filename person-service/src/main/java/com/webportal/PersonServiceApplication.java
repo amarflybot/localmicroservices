@@ -31,6 +31,15 @@ public class PersonServiceApplication {
 		};
 	}
 
+	@Bean
+	CommandLineRunner mongoDataInsert(ComputerRepository computerRepository){
+		return args -> {
+			Computer computer = new Computer(1L, "Name", 123, "Brand");
+			computerRepository.save(computer);
+			computerRepository.findAll().forEach(System.out::println);
+		};
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(PersonServiceApplication.class, args);
 	}
