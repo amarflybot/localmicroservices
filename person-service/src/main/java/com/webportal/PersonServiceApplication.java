@@ -10,6 +10,8 @@ import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.context.annotation.Bean;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 @EnableBinding(Sink.class)
@@ -34,7 +36,12 @@ public class PersonServiceApplication {
 	@Bean
 	CommandLineRunner mongoDataInsert(ComputerRepository computerRepository){
 		return args -> {
-			Computer computer = new Computer(1L, "Name", 123, "Brand");
+			List<RAM> ramList = new ArrayList<>();
+			ramList.add(new RAM(1L, "Corsair", RAMCLASS.CLASS1));
+			ramList.add(new RAM(2L, "Transcendent", RAMCLASS.CLASS2));
+			Computer computer = new Computer(1L, "Name", 123, "Brand",
+					new MotherBoard(1L, "InteMotherBoard"),
+					ramList);
 			computerRepository.save(computer);
 			computerRepository.findAll().forEach(System.out::println);
 		};

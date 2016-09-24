@@ -3,6 +3,10 @@ package com.webportal;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import java.util.List;
+
 /**
  * Created by amarendra on 24/09/16.
  */
@@ -16,14 +20,40 @@ public class Computer {
     private Integer ipaddress;
     private String brand;
 
+    @OneToOne
+    private MotherBoard motherBoard;
+
+    @OneToMany
+    private List<RAM> ramList;
+
     public Computer() {
     }
 
-    public Computer(Long id, String name, Integer ipaddress, String brand) {
+    public Computer(Long id, String name, Integer ipaddress,
+                    String brand, MotherBoard motherBoard,
+                    List<RAM> ramList) {
         this.id = id;
         this.name = name;
         this.ipaddress = ipaddress;
         this.brand = brand;
+        this.motherBoard = motherBoard;
+        this.ramList = ramList;
+    }
+
+    public MotherBoard getMotherBoard() {
+        return motherBoard;
+    }
+
+    public void setMotherBoard(MotherBoard motherBoard) {
+        this.motherBoard = motherBoard;
+    }
+
+    public List<RAM> getRamList() {
+        return ramList;
+    }
+
+    public void setRamList(List<RAM> ramList) {
+        this.ramList = ramList;
     }
 
     public Long getId() {
