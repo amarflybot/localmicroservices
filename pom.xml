@@ -16,5 +16,6 @@
 		<module>person-client</module>
 		<module>auth-service</module>
 		<module>opentsdb</module>
+		<module>admin-service</module>
 	</modules>
 </project>
