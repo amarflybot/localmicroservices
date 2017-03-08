@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/amarraja123/config.git
+server:
+  port: 0
+

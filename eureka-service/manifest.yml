@@ -1,0 +1,7 @@
+---
+applications:
+- name: eureka-service
+  memory: 512M
+  instances:  1
+  buildpack:  java_buildpack
+  path: target/eureka-service-0.0.1-SNAPSHOT.jar
