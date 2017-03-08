@@ -17,5 +17,7 @@
 		<module>auth-service</module>
 		<module>opentsdb</module>
 		<module>admin-service</module>
+		<module>serviceA</module>
+		<module>serviceB</module>
 	</modules>
 </project>
