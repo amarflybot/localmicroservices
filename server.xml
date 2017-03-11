@@ -139,7 +139,7 @@
         <Context docBase="webAppB" path="/customwebAppB" reloadable="true" source="org.eclipse.jst.jee.server:web">
           <Environment name="name" type="java.lang.String" value="Amar" />
           <Environment name="title" type="java.lang.String" value="Kumar" />
-</Context>
+        </Context>
 
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
