@@ -7,5 +7,5 @@ spring:
         git:
           uri: https://github.com/amarraja123/config.git
 server:
-  port: 0
+  port: 8888
 

@@ -33,7 +33,7 @@ public class PersonServiceApplication {
 		};
 	}
 
-	@Bean
+	/*@Bean
 	CommandLineRunner mongoDataInsert(ComputerRepository computerRepository){
 		return args -> {
 			List<RAM> ramList = new ArrayList<>();
@@ -45,7 +45,7 @@ public class PersonServiceApplication {
 			computerRepository.save(computer);
 			computerRepository.findAll().forEach(System.out::println);
 		};
-	}
+	}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(PersonServiceApplication.class, args);
